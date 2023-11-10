@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+:root {
+  font-family: 'Lato', sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  appearance: none;
+  border: 0;
+  outline: none;
+}
+
+html, body {
+  width: 100vw;
+  height: 100vh;
+}
+
+body.theme-dark {
+  background: var(--soft-black);
+  color: var(--white);
+  transition: background .8s, color .8s;
+}
+
+body.theme-light {
+  --background: var(--white);
+  --color: var(--soft-black);
+}
+
+ul, li {
+  list-style: none;
+}

@@ -1,0 +1,82 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12.5rem 2.5rem;
+  gap: 5.625rem;
+  max-width: 1280px;
+}
+
+.hero h2 {
+  font-size: 2.625rem;
+  line-height: 2.5rem;
+}
+
+.hero h2 span {
+  color: var(--violeta-principal);
+}
+
+.hero p {
+  color: var(--soft-white);
+  margin: 2.5rem 0;
+}
+
+.hero .btn-contact a {
+  padding: 0.625rem 2.5rem;
+  cursor: pointer;
+  border-radius: 12px;
+  border: 0;
+  font-weight: 600;
+  font-size: 1.125rem;
+  background-color: var(--violeta-principal);
+  color: var(--soft-white);
+  transition: .3s;
+}
+
+.hero .btn-contact a:hover {
+  box-shadow: 0px 0px 8px var(--violeta-principal);
+}
+
+.hero .hero-image img {
+  position: relative;
+  animation: float 2s ease-in-out infinite alternate;
+  width: 100%;
+  max-width: 650px;
+}
+
+@keyframes float {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    display: flex;
+    flex-direction: column;
+    padding: 10rem 2rem;
+    gap: 40px;
+  }
+  
+  .hero h2 {
+    font-size: 1.75rem;
+    line-height: 1.25rem;
+  }
+  
+  .hero p {
+    margin: 2rem 0;
+    text-align: justify;
+  }
+  
+  .hero .btn-contact a {
+    font-size: 0.75rem;
+  }
+  
+  .hero .hero-image img {
+    width: 100%;
+    max-width: 550px;
+  }
+}

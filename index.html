@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name=”description” content=”Projeto de interface de usuários”>
+  <link rel="stylesheet" href="./assets/index/index.css" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <title>UI Web</title>
+</head>
+
+<body>
+  <!--HEADER-->
+  <header>
+    <a href="#" class="title title-light">Front<span>MB</span></a>
+    <nav class="navbar">
+      <ul class="menu" id="navLinks">
+        <li>
+          <a href="#" class="link-light">Home</a>
+        </li>
+        <li>
+          <a href="#" class="link-light">About</a>
+        </li>
+        <li>
+          <a href="#" class="link-light">Works</a>
+        </li>
+        <li>
+          <a href="#" class="link-light">Contact</a>
+        </li>
+        <li>
+          <img src="files/sun.png" id="icon" alt="Ícone do sol">
+        </li>
+      </ul>
+      <div class="menu-toggle" id="menuToggle">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+  </header>
+
+  <!--SECTION HERO-->
+  <main>
+    <section class="hero">
+      <div class="txt-text">
+        <h2>
+          Transformar ideias em sites
+          <span>Web funcionais.</span>
+        </h2>
+        <p>
+          Programador Web Front End com paixão pela criação de experiências
+          de utilizador cativantes
+          ao meu vê criar programas não é so um trabalho, mas também uma arte
+          que tem um valor estético
+        </p>
+        <div class="btn-contact">
+          <a href="#">
+            Entre em contato
+          </a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="./files/progressive-app.svg" alt="Image de computador">
+      </div>
+    </section>
+  </main>
+
+  <!--FOOTER-->
+  <footer class="footer-light">
+    <p>2023 © Todos os direitos reservados.
+      Construído com
+      ♡
+      por
+      Miguel</p>
+  </footer>
+
+  <script defer>
+    const menuToggle = document.getElementById("menuToggle")
+    const navLinks = document.getElementById("navLinks")
+    const theme = document.getElementById("icon")
+
+    theme.addEventListener("click", () => {
+      if (document.body.classList.contains("theme-light")) {
+        theme.src = "files/sun.png"
+        document.body.classList.toggle("theme-light")
+      } else {
+        theme.src = "files/moon.png"
+      }
+
+      if (document.body.classList.contains("theme-dark")) {
+        theme.src = "files/sun.png"
+        document.body.classList.remove("theme-dark")
+      } else {
+        theme.src = "files/moon.png"
+        document.body.classList.add("theme-dark")
+      }
+    })
+
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("open")
+      menuToggle.classList.toggle("open")
+    })
+  </script>
+</body>
+
+</html>
